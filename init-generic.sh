@@ -1,6 +1,6 @@
 #!/bin/bash
 @echo off
-WORK_DIR="$HOME"
+WORK_DIR="$HOME/.dotfiles"
 
 cd $WORK_DIR
 
@@ -31,12 +31,14 @@ if which fc-cache >/dev/null 2>&1 ; then
 fi
 
 # get terminal settings
-mkdir .dotfiles
-cd .dotfiles
 wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/profile0.mtconf
+wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/global.mtconf
 wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/import-mate-terminal.sh
 wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/export-mate-terminal.sh 
 chmod +x import-mate-terminal.sh
 chmod +x export-mate-terminal.sh
 
-cd $WORK_DIR
+# copy all the stuff
+cp .dotfiles/.bashrc ~/.bashrc
+cp .dotfiles/.bash_aliases ~/.bash_aliases
+cp .dotfiles/.tmux.conf ~/.tmux.conf
