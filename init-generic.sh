@@ -23,7 +23,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # install fonts
 font_dir="$HOME/.local/share/fonts"
 mkdir -p $font_dir
-wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O "~/.local/share/fonts/Cousine for Powerline.ttf"
+wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O ".local/share/fonts/Cousine for Powerline.ttf"
 
 # refresh font cache
 if which fc-cache >/dev/null 2>&1 ; then
