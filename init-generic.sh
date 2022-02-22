@@ -14,7 +14,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all --no-fish --no-zsh
 
 # create RSA keypair for persistence over SSH
-mkdir -p .ssh
+mkdir -p ~/.ssh
 ssh-keygen -t rsa -f ./ssh/id_rsa
 
 # install tmux 
@@ -22,8 +22,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install fonts
 font_dir="$HOME/.local/share/fonts"
-mkdir -o $font_dir
-wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O ".local/share/fonts/Cousine for Powerline.ttf"
+mkdir -p $font_dir
+wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O "~/.local/share/fonts/Cousine for Powerline.ttf"
 
 # refresh font cache
 if which fc-cache >/dev/null 2>&1 ; then
