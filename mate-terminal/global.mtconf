@@ -1,0 +1,5 @@
+[/]
+default-profile='profile0'
+profile-list=['default', 'profile0']
+use-menu-accelerators=false
+use-mnemonics=false

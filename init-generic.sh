@@ -40,4 +40,3 @@ chmod +x import-mate-terminal.sh
 chmod +x export-mate-terminal.sh
 
 cd $WORK_DIR
-
