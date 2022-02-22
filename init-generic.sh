@@ -5,9 +5,9 @@ mkdir -p $WORK_DIR
 cd $WORK_DIR
 
 # prepare homeing directory to preload configs
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/bash/.bash_aliases
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/bash/.bashrc
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/tmux/.tmux.conf
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/bash/.bash_aliases
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/bash/.bashrc
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/tmux/.tmux.conf
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -23,7 +23,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # install fonts
 font_dir="$HOME/.local/share/fonts"
 mkdir -p $font_dir
-wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O "$HOME/.local/share/fonts/Cousine for Powerline.ttf"
+curl https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O "$HOME/.local/share/fonts/Cousine for Powerline.ttf"
 
 # refresh font cache
 if which fc-cache >/dev/null 2>&1 ; then
@@ -31,10 +31,10 @@ if which fc-cache >/dev/null 2>&1 ; then
 fi
 
 # get terminal settings
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/profile0.mtconf
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/global.mtconf
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/import-mate-terminal.sh
-wget https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/export-mate-terminal.sh 
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/profile0.mtconf
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/global.mtconf
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/import-mate-terminal.sh
+curl -O https://raw.githubusercontent.com/jd84/dotfiles-linux/master/mate-terminal/export-mate-terminal.sh 
 chmod +x import-mate-terminal.sh
 chmod +x export-mate-terminal.sh
 
