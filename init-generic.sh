@@ -1,7 +1,7 @@
 #!/bin/bash
 @echo off
 WORK_DIR="$HOME/.dotfiles"
-
+mkdir -p $WORK_DIR
 cd $WORK_DIR
 
 # prepare homeing directory to preload configs
@@ -23,7 +23,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # install fonts
 font_dir="$HOME/.local/share/fonts"
 mkdir -p $font_dir
-wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O ".local/share/fonts/Cousine for Powerline.ttf"
+wget https://github.com/powerline/fonts/raw/master/Cousine/Cousine%20for%20Powerline.ttf -O "$HOME/.local/share/fonts/Cousine for Powerline.ttf"
 
 # refresh font cache
 if which fc-cache >/dev/null 2>&1 ; then
@@ -39,6 +39,6 @@ chmod +x import-mate-terminal.sh
 chmod +x export-mate-terminal.sh
 
 # copy all the stuff
-cp .dotfiles/.bashrc ~/.bashrc
-cp .dotfiles/.bash_aliases ~/.bash_aliases
-cp .dotfiles/.tmux.conf ~/.tmux.conf
+cp .bashrc ~/.bashrc
+cp .bash_aliases ~/.bash_aliases
+cp .tmux.conf ~/.tmux.conf
